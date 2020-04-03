@@ -5,12 +5,12 @@ jobs:
   alert: 
     name: Create Alert Issue 
     runs-on: ubuntu-latest
+    env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - uses: JasonEtco/create-an-issue@v2
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
+    with:
         filename: .github/fork-issue-template.md
-        assignees: github.event.forkee.owner.logn
-      if: github.event.forkee.owner.type != 'Organization'
+        assignees: github.event.forkee.owner.login
+    if: github.event.forkee.owner.type != 'Organization'
