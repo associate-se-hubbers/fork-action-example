@@ -1,5 +1,5 @@
 # Workflow to automate fork alerts if forks are created outside of the original repository owner.
-name: Fork Alert 
+name: Fork Issue Alert 
 on: fork 
 jobs:
   alert: 
