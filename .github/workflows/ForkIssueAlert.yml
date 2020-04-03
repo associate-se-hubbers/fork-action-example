@@ -11,6 +11,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        filename: .github/some-other-template.md
-        assignees: github.event.forkee.owner.logib
+        filename: .github/fork-issue-template.md
+        assignees: github.event.forkee.owner.logn
       if: github.event.forkee.owner.type != 'Organization'
