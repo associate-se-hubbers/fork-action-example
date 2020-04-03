@@ -12,5 +12,4 @@ jobs:
       - uses: JasonEtco/create-an-issue@v2
         with:
           filename: .github/fork-issue-template.md
-          assignees: github.event.forkee.owner.login
     if: github.event.forkee.owner.type == 'Organization'
